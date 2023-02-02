@@ -1,0 +1,7 @@
+{
+  "name": "Simple GPay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Google Pay Demo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Google Pay Demo</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <section class="inner-content">
+    <ion-button *ngIf="googlePayIsAvailable; else noGpay" shape="round" color="dark" type="button" (click)="makePaymentRequest()">
+      <ion-icon slot="start" name="logo-google"></ion-icon>Make Payment
+    </ion-button>
+  </section>
+</ion-content>
+
+<ng-template #noGpay>
+  <div class="nope">
+    <h1>Google Pay is unavailable</h1>
+    <p>Please verify that both your Google Pay (Merchant ID etc.) and the configuration from your Payment Service Provider are all correct!</p>
+  </div>
+</ng-template>
